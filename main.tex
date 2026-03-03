@@ -1,0 +1,129 @@
+% main.tex — “O Último Engano” (Overleaf-ready)
+% Compilar com: LuaLaTeX
+\documentclass[11pt,openany]{scrbook} % KOMA-Script
+\usepackage[backend=biber,style=authoryear,sorting=nyt]{biblatex}
+\addbibresource{backmatter/references.bib}
+
+
+% ---------- Pacotes ----------
+\usepackage{fontspec}
+\setmainfont{EB Garamond}     % Serif do corpo
+\setsansfont{Source Sans Pro} % Sans para títulos/boxes
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black,
+  pdftitle={O Último Engano},
+  pdfauthor={Andrey Alencar Quadros}
+}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% ---------- Formato da página ----------
+% Escolha 1: 6x9" (KDP)
+% \usepackage[paperwidth=6in,paperheight=9in,inner=25mm,outer=20mm,top=22mm,bottom=25mm,bindingoffset=6mm]{geometry}
+
+% Escolha 2: 16x23 cm (Gráfica BR) — RECOMENDADO
+\usepackage[paperwidth=16cm,paperheight=23cm,
+            inner=25mm,outer=20mm,top=22mm,bottom=25mm,
+            bindingoffset=6mm]{geometry}
+
+\linespread{1.13}
+
+% ---------- Estilo ----------
+\RedeclareSectionCommand[beforeskip=3ex plus 1ex minus .2ex,
+                        afterskip=2ex plus .2ex]{chapter}
+\addtokomafont{chapter}{\sffamily\bfseries\Large}
+\addtokomafont{section}{\sffamily\bfseries}
+\setcounter{secnumdepth}{2}
+
+% ---------- Boxes NIC ----------
+\newtcolorbox{nicbox}{
+  breakable,
+  colback=white, colframe=black!15,
+  fonttitle=\sffamily\bfseries,
+  title=Framework NIC,
+  left=6mm,right=6mm,top=3mm,bottom=3mm
+}
+\newtcolorbox{checklist}[1][]{
+  breakable,
+  colback=black!2, colframe=black!15,
+  fonttitle=\sffamily\bfseries,
+  title={Checklist},
+  left=6mm,right=6mm,top=3mm,bottom=3mm,#1
+}
+
+% ---------- Metadados ----------
+\title{\textbf{O Último Engano}\\\large O mapa cristão para sobreviver ao controle digital}
+\author{Andrey Alencar Quadros}
+\date{\the\year}
+
+\begin{document}
+
+
+% ---------------------------------- PRÉ-TEXTUAIS ----------------------------------
+\frontmatter
+\input{frontmatter/capa}
+\maketitle
+\input{frontmatter/half-title}
+\input{frontmatter/copyright}
+\input{frontmatter/dedicatoria}
+\input{frontmatter/epigrafe}
+\input{frontmatter/agradecimentos}
+% \input{frontmatter/prefacio} % opcional
+
+\input{frontmatter/introducao}
+
+\tableofcontents
+
+% ---------------------------------- TEXTUAIS ----------------------------------
+\mainmatter
+
+% Prólogo (não numerado na TOC com addcontentsline)
+\input{chapters/prologo}
+
+\part{Fundamentos que não quebram}
+\input{chapters/01_como_ler_apocalipse}
+\input{chapters/02_graca_fe_perseveranca}
+\input{chapters/03_verdade_em_tempos_deepfake}
+\input{chapters/04_esperanca_que_nao_pode_ser_hackeada}
+
+\part{A Máquina do Engano}
+\input{chapters/05_a_imagem_que_fala}
+\input{chapters/06_profetas_do_algoritmo}
+\input{chapters/07_identidade_programavel}
+\input{chapters/08_marca_moedas_e_portas}
+\input{chapters/09_transumanismo}
+
+\part{Guerra silenciosa por Narrativa, Identidade e Controle}
+\input{chapters/10_babilonia_2}
+\input{chapters/11_crise_colapso_poder}
+\input{chapters/12_o_anticristo}
+
+\part{Como então viver}
+\input{chapters/13_regra_de_vida_digital}
+\input{chapters/14_familias_e_igrejas_resilientes}
+\input{chapters/15_etica_para_construtores}
+\input{chapters/16_missao_na_era_do_medo}
+
+\part{O fim do fim}
+\input{chapters/17_juizos_babilonia_e_a_queda}
+\input{chapters/18_mapa_das_posicoes_escatologicas}
+\input{chapters/19_perguntas_dificeis}
+\input{chapters/20_epilogo}
+
+% ---------------------------------- PÓS-TEXTUAIS ----------------------------------
+\backmatter
+\input{appendix/apendices}
+\input{appendix/notas}
+\input{appendix/bibliografia}
+\input{appendix/sobre_o_autor}
+\input{appendix/colofao}
+
+\end{document}

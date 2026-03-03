@@ -1,0 +1,114 @@
+\chapter{Ética para quem constrói tecnologia}
+\noindent\textit{Vinheta.} Você é dev numa \emph{fintech}. Seu gestor pede para ajustar o algoritmo de oferta para ``\emph{aumentar conversão em 12\%}''. Na reunião, alguém sugere: \emph{esconder} taxas em fontes cinzas e usar notificações em horários de maior impulsividade. ``É legal'', dizem. ``Todo mundo faz''. Você olha o backlog e percebe: não é uma tarefa técnica; é uma \textbf{decisão moral}.
+
+\section{Mapa bíblico}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Verdade e justiça} (Pv~12:22; Mq~6:8): honestidade e misericórdia como padrão de Deus.
+  \item \textbf{Falar por quem não tem voz} (Pv~31:8--9): proteger o vulnerável contra esquemas injustos.
+  \item \textbf{Obediência a Deus e às autoridades} (At~5:29; Rm~13): submissão civil \emph{sem} ceder à iniquidade.
+  \item \textbf{Exemplo de Daniel} (Dn~1; 6): fidelidade em sistemas pagãos, com excelência e coragem.
+  \item \textbf{Consciência} (1~Co~10:23--33): tudo é lícito? nem tudo convém; discernimento por amor.
+\end{itemize}
+
+\begin{nicbox}
+\textbf{NIC aplicado}\\
+\textbf{Narrativa}: qual ``história de sucesso'' esta feature conta (e esconde)?\\
+\textbf{Identidade}: quem as escolhas de design favorecem (e quem excluem)?\\
+\textbf{Controle}: que portas abrimos/fechamos --- e para quem?
+\end{nicbox}
+
+\section{Princípios claros (5 âncoras práticas)}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Dignidade humana}: pessoas \emph{não} são cliques nem perfis; evitar humilhação/manipulação.
+  \item \textbf{Verdade}: nada de engano deliberado (meias verdades, dark patterns).\footnote{``Dark patterns'': padrões de interface que induzem ao erro.}
+  \item \textbf{Justiça para vulneráveis}: proteger crianças, endividados, doentes; avaliar impacto assimétrico.
+  \item \textbf{Proporcionalidade \& minimização}: dados e riscos mínimos para atingir o objetivo legítimo.
+  \item \textbf{Prestação de contas}: trilhas de decisão, auditoria e correção \emph{antes} do incidente.
+\end{itemize}
+
+\section{Linhas vermelhas (não atravessar)}
+\begin{checklist}[title={Exemplos concretos}]
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Engano} intencional: ocultar custos, simular escassez falsa, \emph{shaming} para forçar consentimento.
+  \item \textbf{Exploração de vulneráveis}: targeting de menores/idosos para produtos de alto risco.
+  \item \textbf{Vigilância sem base} ou \textbf{profiling discriminatório}: coleta excessiva, rastreio secreto, listas negras opacas.
+  \item \textbf{Coerção econômica}: bloquear serviços essenciais por motivos não legais/éticos transparentes.
+  \item \textbf{Riscos sem mitigação}: lançar sistemas que afetam pessoas sem teste, \emph{kill switch} ou canal de reparo.
+\end{itemize}
+\end{checklist}
+
+\section{Matriz de decisão (10 minutos antes de lançar)}
+\begin{checklist}[title={6 perguntas NIC+}]
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Propósito}: o que buscamos? há \textbf{bem público} claro?
+  \item \textbf{Meios}: há \textbf{engano} ou \textbf{pressão} embutidos no design?
+  \item \textbf{Dados}: coletamos o \textbf{mínimo necessário}? há retenção/compartilhamento injustificado?
+  \item \textbf{Impacto}: quem perde com isso? crianças e vulneráveis foram considerados?
+  \item \textbf{Reversibilidade}: existe botão de desligar/reverter? como reparar danos?
+  \item \textbf{Controle}: quem pode abusar da nossa ``porta''? temos \textbf{governança}?
+\end{itemize}
+\end{checklist}
+
+\section{Objeção de consciência (como praticar com sabedoria)}
+\subsection*{Passos graduais}
+\begin{enumerate}[leftmargin=*,nosep]
+  \item \textbf{Entenda} o requisito e documente riscos (conforme a matriz).
+  \item \textbf{Proponha alternativas} seguras/éticas (\emph{opt-in} claro, limites para menores, transparência de preço).
+  \item \textbf{Escalone} com respeito: líder direto $\rightarrow$ compliance/segurança $\rightarrow$ jurídico/ética.
+  \item \textbf{Decida} se executa, transfere, adapta ou recusa; prepare-se para consequências (inclusive de emprego).
+  \item \textbf{Registre} por escrito e guarde evidências do processo.
+\end{enumerate}
+
+\subsection*{Modelo de mensagem (adaptável)}
+\begin{tcolorbox}[title=Solicitação de revisão ética,breakable]
+Olá, [nome]. Ao analisar a \#[tarefa], identifiquei riscos éticos: [resumo objetivo].
+Pelos princípios internos e pelos requisitos legais aplicáveis, proponho a alternativa [X], que mitiga [riscos] mantendo [objetivo de negócio].
+Se necessário, peço revisão de [comitê/área] antes do lançamento. Fico à disposição para ajustar tecnicamente.
+Atenciosamente, [seu nome].
+\end{tcolorbox}
+
+\section{Design responsável (para times de produto/engenharia)}
+\begin{checklist}[title={Boas práticas essenciais}]
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Privacy by design}: minimização, propósito específico, criptografia em trânsito/repouso, retenção curta.
+  \item \textbf{Segurança básica}: autenticação forte, revisão de código, pentest, gestão de segredos, backups testados.
+  \item \textbf{Avaliação de risco algorítmico}: testes de viés, \emph{red teaming}, explicabilidade adequada ao contexto.
+  \item \textbf{Controles operacionais}: \emph{kill switch}, \emph{rate limits}, monitoramento e canal de abuso 24/7.
+  \item \textbf{Transparência}: changelogs, termos claros, \emph{scorecards} de impacto público.
+\end{itemize}
+\end{checklist}
+
+\section{Para gestores e donos}
+\begin{checklist}[title={Governança em 1 página}]
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Política de ética} simples (2--3 páginas) com exemplos do que \emph{não} fazer.
+  \item \textbf{Comitê leve} (produto, legal, segurança, pastoral/ética) para casos difíceis.
+  \item \textbf{Registro de riscos} e plano de mitigação antes de OKR/roadmap.
+  \item \textbf{Incidentes}: playbook de resposta, comunicação honesta, reparação a afetados.
+\end{itemize}
+\end{checklist}
+
+\section{Para freelancers e pequenas equipes}
+\begin{checklist}[title={Cláusulas e práticas que te protegem}]
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Cláusula de objeção}: direito de recusar tarefas contrárias a princípios éticos definidos.
+  \item \textbf{Uso aceitável de dados}: proibir uso além do contrato; apagar dados ao término.
+  \item \textbf{Sinalizadores de alerta}: clientes que pedem scraping massivo, perfis ocultos, automação de engano.
+  \item \textbf{Plano de saída}: condições claras para encerramento sem penalidade em caso de violação ética.
+\end{itemize}
+\end{checklist}
+
+\section{Pacto do construtor cristão (compromisso pessoal)}
+\begin{tcolorbox}[title=Compromisso]
+Construirei com excelência e honestidade; protegerei os vulneráveis; direi a verdade sobre o que meu sistema faz; recusarei enganar; levantarei a mão quando vir riscos; aceitarei perdas por causa da fidelidade a Cristo.
+\end{tcolorbox}
+
+\section{Perguntas para grupos pequenos}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Qual linha vermelha você precisa escrever no papel hoje?
+  \item Em que \textbf{pequena decisão} (mensurável) sua equipe pode aumentar a honestidade essa semana?
+  \item Você tem um \textbf{plano de objeção} preparado? Quem te apoia se precisar usá-lo?
+\end{itemize}
+
+\bigskip
+\noindent\textit{Próximo capítulo: Missão na era do medo — evangelismo digital, segurança de dados e discipulado sob pressão.}

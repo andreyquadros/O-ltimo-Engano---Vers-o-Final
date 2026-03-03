@@ -1,0 +1,10 @@
+% frontmatter/capa.tex — Capa em página cheia (full-bleed)
+% Requer: \usepackage{graphicx} e (opcional) \usepackage{geometry}
+\clearpage
+\begingroup
+\thispagestyle{empty}
+\newgeometry{left=0pt,right=0pt,top=0pt,bottom=0pt}
+\noindent\includegraphics[width=\paperwidth,height=\paperheight]{img/capa.png}
+\restoregeometry
+\endgroup
+\clearpage

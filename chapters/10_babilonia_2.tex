@@ -1,0 +1,122 @@
+\chapter{Arquitetura da Babilônia 2.0}
+\noindent\textit{Vinheta.} Uma tempestade derruba torres de transmissão e fecha o principal acesso rodoviário à capital por 48 horas. O porto reduz operação. As operadoras racionam sinal. Supermercados lotam; \textit{Pix} oscila, cartões recusam. A padaria anuncia: ``\emph{Hoje só dinheiro e quantidade limitada.}'' O problema \emph{não} é maldade de pessoas. É \textbf{dependência de infraestrutura} --- elétrica, logística, telecom, pagamentos --- \emph{em cascata}.
+
+\section{Mapa bíblico}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Cidade e poder} (Gn 11): Babel como símbolo de concentração sem Deus.
+  \item \textbf{Comércio e queda} (Ap 18): quando a economia vira ídolo, ``\emph{em uma hora chegou a tua ruína}''.
+  \item \textbf{Prudência comunitária} (Gn 41): José prepara a cidade para escassez com \textbf{planejamento}.
+  \item \textbf{Mordomia e cuidado} (Pv 6:6--8; 1~Tm 5:8): prover para os seus, com diligência.
+  \item \textbf{Paz da cidade} (Jr 29:7): trabalhar pelo bem comum, mesmo no exílio.
+\end{itemize}
+
+\section{Segurança pública \emph{vs.} privacidade (resumo honesto)}
+Cidades ``inteligentes'' usam sensores, câmeras, análise de dados e automação. Benefícios: \textbf{resposta rápida} a emergências, trânsito mais fluido, melhor uso de recursos. Riscos: \textbf{vigilância massiva}, \textbf{perfilização} e \textbf{abuso de dados}. Como cristãos, buscamos \textbf{ordem justa} sem render a liberdade do próximo a uma \emph{onisciência simulada}.
+
+\begin{nicbox}
+\textbf{NIC aplicado (segurança x privacidade)}\\
+\textbf{Narrativa}: ``segurança absoluta'' costuma pedir \emph{silêncio} sobre trade-offs.\\
+\textbf{Identidade}: moradores viram \emph{perfis de risco}.\\
+\textbf{Controle}: regras automatizadas definem quem entra, circula e compra.
+\end{nicbox}
+
+\section{Dependência de infraestrutura (o foco deste capítulo)}
+Pense a cidade como \textbf{cinco redes interdependentes}:
+\begin{enumerate}[leftmargin=*,nosep]
+  \item \textbf{Energia elétrica} (geração, transmissão, distribuição);
+  \item \textbf{Telecomunicações} (móvel, fibra, data centers, cloud);
+  \item \textbf{Água e saneamento} (captação, tratamento, bombeamento);
+  \item \textbf{Logística e combustíveis} (portos, rodovias, armazéns, postos);
+  \item \textbf{Pagamentos e comércio} (\emph{Pix}, cartões, TEF, ERPs, bancos).
+\end{enumerate}
+Quando \emph{uma} falha, costuma \textbf{puxar} as outras: sem energia, caem antenas e bombas; sem telecom, caem pagamentos; sem combustível, a logística trava; sem logística, o mercado esvazia.
+
+\section{Cadeia alimentar urbana (do campo ao prato)}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Produção} $\rightarrow$ \textbf{atacadistas/centrais} $\rightarrow$ \textbf{transporte} $\rightarrow$ \textbf{varejo} $\rightarrow$ \textbf{consumidor}.
+  \item Alimentos frescos têm \textbf{giro rápido} e \textbf{cadeia fria} (refrigeração) sensível a falhas.
+  \item \textbf{Pagamentos e estoque} dependem de sistemas (ERPs, TEF, nuvem). Sem eles, muitos comércios ficam \emph{legal e tecnicamente} impedidos de operar.
+\end{itemize}
+
+\section{Cenários de falha (gatilhos e respostas)}
+\subsection*{1) Queda prolongada de energia}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Gatilhos}: interrupções em vários bairros; retorno intermitente; comunicados de racionamento.
+  \item \textbf{Resposta}: proteger equipamentos, priorizar alimentos perecíveis, usar gelo térmico/caixas, \textbf{evitar} geradores em ambientes fechados.
+\end{itemize}
+
+\subsection*{2) Falha de telecom/pagamentos}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Gatilhos}: \emph{Pix}/cartões instáveis; bancos e operadoras fora do ar; ERPs lentos/offline.
+  \item \textbf{Resposta}: \textbf{dinheiro trocado}, recibos manuais, combinar comércios que vendem ``\emph{anotar para acertar}''; priorizar compras essenciais.
+\end{itemize}
+
+\subsection*{3) Logística e combustíveis}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Gatilhos}: bloqueios, greves, deslizamentos, portos/rodovias fechados; filas em postos.
+  \item \textbf{Resposta}: reduzir deslocamentos, \textbf{carona solidária}, planejamento de consultas/viagens, uso racional de estoque doméstico.
+\end{itemize}
+
+\subsection*{4) Sistemas de comércio (software/ERP) indisponíveis}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Gatilhos}: quedas amplas de serviços em nuvem; varejo só em dinheiro; nota fiscal indisponível.
+  \item \textbf{Resposta}: comprar em mercadinhos/bancas que operam manualmente; \textbf{evitar} grandes volumes e estocagem egoísta.
+\end{itemize}
+
+\subsection*{5) Evento climático extremo}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Gatilhos}: alertas meteorológicos, enchentes, geadas, ondas de calor.
+  \item \textbf{Resposta}: água potável priorizada; abrigos e rotas seguras; medicamentos e documentos à mão.
+\end{itemize}
+
+\section{Ferramenta --- Auditoria de abastecimento do seu bairro (90 minutos)}
+\begin{checklist}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Liste \textbf{3 mercados}, \textbf{2 farmácias}, \textbf{1 padaria} e \textbf{1 açougue} acessíveis a pé.
+  \item Verifique \textbf{formas de pagamento} aceitas e se operam \emph{manualmente} sem sistema.
+  \item Identifique \textbf{feiras livres} e \textbf{cestas locais} (produtores da região).
+  \item Conversem com gerentes: ``\emph{Se cair pagamento/energia, como vocês fazem?}''
+  \item Mapeie \textbf{postos} e \textbf{oficinas} confiáveis no entorno.
+\end{itemize}
+\end{checklist}
+
+\section{Ferramenta --- Plano doméstico 7/30 dias (essenciais reais)}
+\begin{checklist}[title={Itens e hábitos},breakable]
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Água}: reserve para 7 dias (regra prática: 3--4\,L por pessoa/dia para beber e preparo). Reponha e rode o estoque.
+  \item \textbf{Alimentos}: básicos de \textbf{pronto preparo} (grãos, enlatados, frutas secas, aveia, leite em pó), abridor manual, gás/álcool/lenha seguros.
+  \item \textbf{Saúde}: remédios contínuos + kit simples (analgésico, curativos), receitas impressas; itens infantis/idosos.
+  \item \textbf{Energia e luz}: lanternas, pilhas, \emph{power banks} carregados, tomadas filtradas; se possuir gerador, uso \textbf{exclusivamente ventilado}.
+  \item \textbf{Comunicação}: pontos de encontro, números \textbf{no papel}, rádio simples se possível.
+  \item \textbf{Financeiro}: \textbf{dinheiro trocado}; registro manual de despesas; priorização de contas essenciais.
+  \item \textbf{Documentos}: cópias físicas protegidas e digitais \emph{criptografadas}.
+\end{itemize}
+\end{checklist}
+
+\section{Ferramenta --- Igreja/comunidade: mutualidade e mercado justo}
+\begin{checklist}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \textbf{Mapa de vizinhança}: quem é vulnerável? quem tem habilidades (mecânico, enfermeira, motorista)?
+  \item \textbf{Rede de produtores}: conexão com agricultores/atacadistas para \emph{compra coletiva} quando o varejo fraquejar.
+  \item \textbf{Cozinha solidária}: preparar refeições em escala quando faltar gás/energia na vizinhança (rodízio de casas).
+  \item \textbf{Fundo de emergência}: ajuda rápida (alimentos, remédios, transporte) sem burocracia.
+  \item \textbf{Comunicação impressa}: boletins com horários, orientações, endereços úteis.
+\end{itemize}
+\end{checklist}
+
+\section{NIC aplicado (infraestrutura)}
+\begin{nicbox}
+\textbf{Narrativa}: “\emph{Sempre vai funcionar}” é crença, não garantia.\\
+\textbf{Identidade}: somos mais que \emph{consumidores conectados}; somos \emph{corpo} que se cuida.\\
+\textbf{Controle}: portas tecnológicas podem falhar ou fechar; a igreja abre portas de \textbf{generosidade}.
+\end{nicbox}
+
+\section{Perguntas para grupos pequenos}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Quais as \textbf{duas dependências} críticas da sua casa hoje? Como reduzir?
+  \item Qual o \textbf{plano de pagamento} da sua família quando \emph{Pix}/cartões falharem?
+  \item Quem na sua rua precisa de ajuda imediata em um apagão? Quem pode ajudar?
+\end{itemize}
+
+\bigskip
+\noindent\textit{Próximo capítulo: Crise, colapso e poder --- ciberataques, cadeias de suprimento e lei marcial informacional.}
